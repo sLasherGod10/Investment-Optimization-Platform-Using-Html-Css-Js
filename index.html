@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investment Optimization</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>💼 Investment Optimization Platform</h1>
+
+    <div class="card input-section">
+      <label for="numInvestments">Number of Investments:</label>
+      <input type="number" id="numInvestments" min="1" step="1" placeholder="Enter number of investments"/>
+
+      <label for="budget">Budget:</label>
+      <input type="number" id="budget" placeholder="Enter your budget"/>
+
+      <button id="addInvestmentsBtn" class="btn">➕ Add Investments</button>
+    </div>
+
+    <div id="investmentFields" class="card investment-fields">
+      <!-- Investment inputs will be added here dynamically -->
+    </div>
+
+    <button id="calculateBtn" class="btn">📈 Calculate Returns</button>
+
+    <div class="card">
+      <h2>📊 Results</h2>
+      <pre id="resultsText"></pre>
+    </div>
+
+    <div class="card">
+      <h2>📉 Comparison with Historical Data</h2>
+      <canvas id="comparisonChart" width="400" height="200"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
